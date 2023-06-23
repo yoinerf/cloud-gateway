@@ -5,13 +5,18 @@ server:
 eureka:
   instance:
     preferIpAddress: false
-    hostname: ${HOSTNAME:localhost}
-    
+    hostname: ${HOSTNAME:cloud-gateway-production-movies.up.railway.app}
+    non-secure-port-enable: false
+    secure-port-enable: true
+    non-secure-port: 80
+    secure-port: 443
+
+
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA_URL:https://eureka-production-movies.up.railway.app/eureka}
       
 
 ## Habilitamos el service discovery (haciendo uso de Eureka)
