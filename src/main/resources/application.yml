@@ -40,6 +40,9 @@ spring:
             allowedMethods:
             - GET
             - POST
+            - DELETE
+            - PATH
+            - PUT
       
 
 ## Habilitamos la API Actuator para poder acceder a /actuator/gateway/routes
